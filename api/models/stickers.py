@@ -1,12 +1,13 @@
 from django.db import models
 
+
 #####################################
 #
 # Locator
 #
 #####################################
 class LocatorVehicleStickers(models.Model):
-    start_date= models.DateField(null=True)
+    start_date = models.DateField(null=True)
     last_name = models.CharField(max_length=30)
     first_name = models.CharField(max_length=30)
     middle_name = models.CharField(max_length=30)
@@ -53,7 +54,7 @@ class ContractorVehicleStickers(models.Model):
     contractor_id = models.CharField(max_length=30)
     id_valid_until = models.DateField()
 
-    start_date= models.DateField(null=True)
+    start_date = models.DateField(null=True)
     purpose = models.CharField(max_length=255)
     vehicle_type = models.ForeignKey('VehicleType', on_delete=models.PROTECT)
     vehicle_plate_no = models.CharField(max_length=20, db_index=True)
@@ -96,15 +97,15 @@ class ServiceVehicleStickers(models.Model):
     serviceprovidertype = models.CharField(max_length=30)
 
     locator = models.ForeignKey('Locator', on_delete=models.PROTECT)
-    companyname= models.CharField(max_length=250)
+    companyname = models.CharField(max_length=250)
 
-    spid_valid_until= models.DateField(null=True)
-    esp_certificate= models.CharField(max_length=30)
-    contractvalid_until= models.DateField(null=True)
-    driveridnumber= models.CharField(max_length=30)
+    spid_valid_until = models.DateField(null=True)
+    esp_certificate = models.CharField(max_length=30)
+    contractvalid_until = models.DateField(null=True)
+    driveridnumber = models.CharField(max_length=30)
 
-    start_date= models.DateField(null=True)
-    end_date= models.DateField(null=True)
+    start_date = models.DateField(null=True)
+    end_date = models.DateField(null=True)
     purpose = models.CharField(max_length=255)
     vehicle_type = models.ForeignKey('VehicleType', on_delete=models.PROTECT)
     vehicle_plate_no = models.CharField(max_length=20, db_index=True)
@@ -144,9 +145,9 @@ class ServiceVehicleStickers(models.Model):
 class VendorVehicleStickers(models.Model):
 
     locator = models.ForeignKey('Locator', on_delete=models.PROTECT)
-    companyname= models.CharField(max_length=250)
-    start_date= models.DateField(null=True)
-    end_date= models.DateField(null=True)
+    companyname = models.CharField(max_length=250)
+    start_date = models.DateField(null=True)
+    end_date = models.DateField(null=True)
     purpose = models.CharField(max_length=255)
     vehicle_type = models.ForeignKey('VehicleType', on_delete=models.PROTECT)
     vehicle_plate_no = models.CharField(max_length=20, db_index=True)
@@ -176,4 +177,3 @@ class VendorVehicleStickers(models.Model):
     id_pass_sticker = models.CharField(max_length=15, null=True)
     validity_months = models.IntegerField(null=True)
     valid_until = models.DateField(null=True)
-
