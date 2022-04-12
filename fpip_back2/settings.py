@@ -82,7 +82,8 @@ DATABASES = {
         'NAME': 'fpip2',                      # Or path to database file if using sqlite3.
         'USER': 'fpip2',                      # Not used with sqlite3.
         'PASSWORD': 'fpip2!!!',                  # Not used with sqlite3.
-        'HOST': 'ec2-13-214-0-53.ap-southeast-1.compute.amazonaws.com',                      # Set to empty string for localhost. Not used with sqlite3.
+        #'HOST': 'ec2-13-214-0-53.ap-southeast-1.compute.amazonaws.com',                      # Clone
+        'HOST': 'netbalancer-11d57a21c6c4cabc.elb.ap-southeast-1.amazonaws.com',                      # Live
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
     # 'default': {
@@ -134,3 +135,13 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email Stuff
+DEFAULT_FROM_EMAIL = 'parkadmin@fpip.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+
+# Optional SMTP authentication information for EMAIL_HOST.
+EMAIL_HOST_USER = 'parkadmin@fpip.com'
+EMAIL_HOST_PASSWORD = 'xgnbpbasxpyeajrp'
+EMAIL_USE_TLS = True
