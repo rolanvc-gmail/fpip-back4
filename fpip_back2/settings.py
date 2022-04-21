@@ -82,8 +82,8 @@ DATABASES = {
         'NAME': 'fpip2',                      # Or path to database file if using sqlite3.
         'USER': 'fpip2',                      # Not used with sqlite3.
         'PASSWORD': 'fpip2!!!',                  # Not used with sqlite3.
-        #'HOST': 'ec2-13-214-0-53.ap-southeast-1.compute.amazonaws.com',                      # Clone
-        'HOST': 'netbalancer-11d57a21c6c4cabc.elb.ap-southeast-1.amazonaws.com',                      # Live
+        'HOST': 'ec2-13-214-0-53.ap-southeast-1.compute.amazonaws.com',                      # Clone
+        # 'HOST': 'netbalancer-11d57a21c6c4cabc.elb.ap-southeast-1.amazonaws.com',                      # Live
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
     # 'default': {
