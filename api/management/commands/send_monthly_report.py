@@ -34,7 +34,7 @@ class Command(BaseCommand):
 def send_the_email_with_attachment(the_file, start_date, end_date):
     subject = "Monthly Locator Stickers Report from {} to {}".format(start_date, end_date)
     body = "Monthly Locator Stickers Report"
-    email = EmailMessage(subject, body, None, ['rolanvc@gmail.com'])
+    email = EmailMessage(subject, body, None, ['liezel.marajas@fpip.com'], cc=['vvgonzales@fphc.com', 'rolanvc@gmail.com'])
 
     email.attach_file(the_file)
     email.send(fail_silently=False)
